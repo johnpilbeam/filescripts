@@ -6,7 +6,7 @@
 for fullfile in *.pdf
 do  fileName=${fullfile##*/}   
 gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=unencrypted/$fileName  -c .setpdfwrite -f $fullfile
-pdftk $fullfile output protected/$fileName owner_pw paRkeNdsT
+pdftk $fullfile output protected/$fileName owner_pw myPassword
 done
 
 
